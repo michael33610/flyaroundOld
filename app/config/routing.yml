@@ -1,3 +1,11 @@
+wcs_coav_plane_model:
+    resource: "@wcsCoavBundle/Controller/PlaneModelController.php"
+    type:     annotation
+
+wcs_coav:
+    resource: "@wcsCoavBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

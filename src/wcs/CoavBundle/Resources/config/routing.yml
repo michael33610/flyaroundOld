@@ -1,0 +1,15 @@
+wcs_coav_reservation:
+    resource: "@wcsCoavBundle/Resources/config/routing/reservation.yml"
+    prefix:   /reservation
+
+wcs_coav_homepage:
+    path:     /
+    defaults: { _controller: wcsCoavBundle:Default:index }
+
+ wcs_coav_flight:
+        resource: "@wcsCoavBundle/Resources/config/routing/flight.yml"
+        prefix:   /flight
+
+wcs_coav_terrain:
+        resource: "@wcsCoavBundle/Resources/config/routing/terrain.yml"
+        prefix:   /terrain
