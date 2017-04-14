@@ -1,17 +1,26 @@
 wcs\CoavBundle\Entity\Reservation:
     type: entity
-    table: null
-    repositoryClass: wcs\CoavBundle\Repository\ReservationRepository
+    table: reservation
     id:
         id:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
             id: true
             generator:
-                strategy: AUTO
+                strategy: IDENTITY
     fields:
         name:
             type: string
+            nullable: false
             length: 255
+            options:
+                fixed: false
         nbSeats:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: nb_seats
     lifecycleCallbacks: {  }

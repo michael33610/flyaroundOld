@@ -1,25 +1,42 @@
 wcs\CoavBundle\Entity\Flight:
     type: entity
-    table: null
-    repositoryClass: wcs\CoavBundle\Repository\FlightRepository
+    table: flight
     id:
         id:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
             id: true
             generator:
-                strategy: AUTO
+                strategy: IDENTITY
     fields:
         departure:
             type: string
-            length: '4'
+            nullable: false
+            length: 4
+            options:
+                fixed: false
         arrival:
             type: string
-            length: '4'
+            nullable: false
+            length: 4
+            options:
+                fixed: false
         pilot:
             type: string
+            nullable: false
             length: 255
+            options:
+                fixed: false
         freeSeats:
             type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: free_seats
         takeofTime:
             type: datetime
+            nullable: false
+            column: takeof_time
     lifecycleCallbacks: {  }

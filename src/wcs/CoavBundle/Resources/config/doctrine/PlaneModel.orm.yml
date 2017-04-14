@@ -1,6 +1,6 @@
-wcs\CoavBundle\Entity\Terrain:
+wcs\CoavBundle\Entity\PlaneModel:
     type: entity
-    table: terrain
+    table: plane_model
     id:
         id:
             type: integer
@@ -11,35 +11,31 @@ wcs\CoavBundle\Entity\Terrain:
             generator:
                 strategy: IDENTITY
     fields:
-        name:
+        model:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-        icao:
+        manufacturer:
             type: string
-            nullable: false
-            length: 4
-            options:
-                fixed: false
-        latitude:
-            type: float
-            nullable: false
-            precision: 10
-            scale: 0
-        longitude:
-            type: float
-            nullable: false
-            precision: 10
-            scale: 0
-        city:
-            type: string
-            nullable: false
+            nullable: true
             length: 255
             options:
                 fixed: false
-        country:
+        cruisespeed:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: cruiseSpeed
+        nbseats:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: nbSeats
+        status:
             type: string
             nullable: false
             length: 255
